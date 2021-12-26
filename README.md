@@ -1,0 +1,2 @@
+# sentimental
+Sentiment analysis application
