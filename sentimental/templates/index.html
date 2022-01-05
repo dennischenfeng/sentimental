@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <link href="/static/css/style.css" rel="stylesheet">
+  <!-- <link href="/static/css/style.css" rel="stylesheet"> -->
   <script src="/static/js/script.js" defer></script>
   
 </head>
@@ -14,12 +14,15 @@
 <body>
   <form>
     <label for="input-text">Input text:</label>
-    <input type="text" id="input-text" name="input-text"><br>
-    <input type="submit" value="Submit">
+    <!-- <input type="text" id="input-text" name="input-text"><br> -->
+    <input type="text" id="a" name="a"><br>
+    <input type="text" id="b" name="b"><br>
+    <button onClick='send_test(); return false'> Submit </button>
+    <!-- <submit onsubmit='send_test(); return false'> SubmitTest </button> -->
   </form>
 
   <br>
-  <div>The result is: </div>
+  <div id="result-text">The result is: </div>
 
 </body>
 </html>
