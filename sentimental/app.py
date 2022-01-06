@@ -19,8 +19,7 @@ def index():
 def test():
     print(request.json)
     a = request.json['a']
-    b = request.json['b']
-    return json.dumps({"sum": a + b})
+    return json.dumps({"result": a})
 
 
     # return '{"a": "hello world"}'
