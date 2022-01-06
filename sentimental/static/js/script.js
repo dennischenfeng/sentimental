@@ -8,7 +8,7 @@ function send_test() {
   
         //make sure to serialize your JSON body
         body: JSON.stringify({
-            a: parseFloat(document.getElementById('input-text').value)
+            inputText: document.getElementById('input-text-box').value
         })
     })
         .then((response) => {

@@ -17,9 +17,8 @@ def index():
 
 @app.route("/test", methods = ['GET', 'POST'])
 def test():
-    print(request.json)
-    a = request.json['a']
-    return json.dumps({"result": a})
+    input_text = request.json['inputText']
+    return json.dumps({"result": input_text})
 
 
     # return '{"a": "hello world"}'
