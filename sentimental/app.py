@@ -9,7 +9,7 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     input_text = request.json['inputText']
-    result = 1 if len(input_text) > 3 else 0
+    result = 1 if len(input_text) > 1 else 0
     return jsonify({'result': result})
 
 if __name__ == '__main__':
