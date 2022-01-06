@@ -1,18 +1,16 @@
 from flask import Flask, render_template, jsonify, request
-import json
 
 app = Flask(__name__)
 
-# Display your index page
-@app.route("/")
+@app.route('/')
 def index():
-    # return "console.log('hi')"
     return render_template('index.html')
 
-@app.route("/test", methods = ['POST'])
-def test():
+@app.route('/predict', methods=['POST'])
+def predict():
     input_text = request.json['inputText']
-    return jsonify({"result": input_text})
+    result = 1 if len(input_text) > 3 else 0
+    return jsonify({'result': result})
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

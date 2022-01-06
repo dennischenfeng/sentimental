@@ -1,6 +1,6 @@
 function show_prediction() {
-    fetch('/test', {
-        method: "post",
+    fetch('/predict', {
+        method: 'post',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -13,7 +13,7 @@ function show_prediction() {
             return response.json();
         })
         .then((data) => {
-            result_text = document.getElementById("result-text");
+            result_text = document.getElementById('result-text');
             result_text.textContent = `Prediction: ${data.result}`;
         });
 }
