@@ -9,21 +9,10 @@ def index():
     # return "console.log('hi')"
     return render_template('index.html')
 
-# @app.route("/result")
-# def result():
-#     input_text = request.args.get('input-text')
-#     # b = request.args.get('b')
-#     return jsonify({"result": input_text + "test"})
-
-@app.route("/test", methods = ['GET', 'POST'])
+@app.route("/test", methods = ['POST'])
 def test():
     input_text = request.json['inputText']
-    return json.dumps({"result": input_text})
-
-
-    # return '{"a": "hello world"}'
-
-
+    return jsonify({"result": input_text})
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
