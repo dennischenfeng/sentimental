@@ -1,1 +1,1 @@
-vader-lexicon
+vader_lexicon
